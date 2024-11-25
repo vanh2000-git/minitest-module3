@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI 2</title>
+</head>
+<style>
+    table {
+        text-align: center;
+    }
+</style>
+<body>
+<form>
+    <table>
+        <tr>
+            <td><input type="number" id="math" placeholder="Nhập vào điểm toán"></td>
+            <td><input type="number" id="english" placeholder="Nhập vào điểm Tiếng Anh"></td>
+            <td><input type="number" id="literature" placeholder="Nhập vào điểm Văn"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button id="btn" type="button" onclick="getAverageMark()">Đánh giá</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function getAverageMark() {
+        let math = +document.getElementById("math").value;
+        let english = +document.getElementById("english").value;
+        let literature = +document.getElementById("literature").value;
+        let averageMark = 0;
+        let result;
+        averageMark = (math + english + literature) / 3;
+        if (averageMark < 5) {
+            result = `Điểm của trung bình của bạn là ${averageMark}. Không Đạt!`
+        } else if (averageMark > 8) {
+            result = `Điểm của trung bình của bạn là ${averageMark}. Tốt!`
+        } else {
+            result = `Điểm của trung bình của bạn là ${averageMark}. Đạt!`
+        }
+        document.getElementById("btn").innerHTML = result;
+    }
+</script>
+</body>
+</html>

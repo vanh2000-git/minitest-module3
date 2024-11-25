@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI 1</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i < 2; i++) {
+        array[i] = prompt(`Nhập số thứ ${i + 1}`);
+    }
+    console.log(array);
+
+    function deleteSecondNumber() {
+        let newArray = array.slice(0, 1);
+        console.log(newArray);
+    }
+
+    deleteSecondNumber();
+</script>
+</body>
+</html>
